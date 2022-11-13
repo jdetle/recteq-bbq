@@ -1,9 +1,11 @@
 {
-  "name": "autopilot-api",
+  "name": "autopilot-recteq",
   "version": "0.1.0",
-  "bin": {
-    "autopilot-api": "bin/autopilot-api.js"
-  },
+  "workspaces": [
+    "api",
+    "app",
+    "infrastructure"
+  ],
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
