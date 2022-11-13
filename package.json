@@ -7,10 +7,10 @@
     "infrastructure"
   ],
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
-    "test": "jest",
-    "cdk": "cdk"
+    "build": "tsc --workspaces",
+    "watch": "tsc -w --workspaces",
+    "test": "jest --workspaces",
+    "cdk": "cdk -workspace=infrastructure"
   },
   "devDependencies": {
     "@types/jest": "^27.5.2",
