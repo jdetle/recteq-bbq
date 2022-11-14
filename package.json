@@ -1,16 +1,20 @@
 {
   "name": "autopilot-recteq",
   "version": "0.1.0",
-  "workspaces": [
-    "api",
-    "app",
-    "infrastructure"
-  ],
+  "private": "true",
+  "workspaces": {
+    "packages": [
+      "api",
+      "app",
+      "infrastructure"
+    ]
+  },
   "scripts": {
-    "build": "tsc --workspaces",
-    "watch": "tsc -w --workspaces",
-    "test": "jest --workspaces",
-    "cdk": "cdk -workspace=infrastructure"
+    "bootstrap": "npm i -g yarn@latest",
+    "build": "yarn workspaces run build",
+    "watch": "yarn workspaces run tsc -w",
+    "test": "yarn workspaces run jest --workspaces",
+    "cdk": "yarn workspace infrastructure cdk"
   },
   "devDependencies": {
     "@types/jest": "^27.5.2",
