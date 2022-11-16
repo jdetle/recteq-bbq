@@ -23,3 +23,5 @@ dist
 # certs
 certs
 private
+
+.vscode/settings.json
